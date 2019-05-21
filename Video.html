@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>HTML5 Video Page</title>
+    </head>
+    <body><h1>Welcome to HTML5</h1>
+        <h3>Audio</h3><audio controls loop>
+  
+                <source src="SampleAudio_0.4mb.mp3" width="300" >
+                </audio>
+        <h3>Video</h3>
+        <video id="myvideo" width="400" controls loop muted>
+            <source src="SampleVideo_1280x720_5mb.mp4">                
+        </video>
+        <article>
+            <h2>London</h2>
+            <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+            </article>
+            <button id="playid" onclick="VideoPlay()">Play</button>
+            <button id="pauseid" onclick="videopause()"  disabled>Pause</button>
+            <h3><iframe width="560" height="315" src="https://www.youtube.com/embed/q7nXhiI88Pg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></h3>
+            <script>
+                var videoref =getElementById=document.getElementById("myvideo")
+                var playid =getElementById=document.getElementById("playid")
+                var pauseid =getElementById=document.getElementById("pauseid")
+            var videoref=document.getElementById("myvideo")
+            var VideoPlay=function(){
+                console.log("Video play Called")
+                videoref.play()
+                playid.disabled=true
+                pauseid.disabled=false
+                }
+                var videopause =function(){
+                    console.log("Video Paused")
+                    videoref.pause()
+                    pauseid.disabled=true
+                    playid.disabled=false
+                
+                    
+                }
+                
+                </script>
+                
+        </body>
+</html>

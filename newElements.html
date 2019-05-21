@@ -1,0 +1,97 @@
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>HTML5 New Form Elements</title>
+
+    </head>
+    <body onload="setDefaultValues()"> 
+        <h2>Form</h2>
+        <form>
+            <fieldset>
+<legend>
+   Personal Details 
+</legend>
+<div>
+    <label>Name</label>
+    <input type="text" 
+    autofocus 
+    required 
+    pattern="[A-Za-z\s]{4,65}">
+</div>
+<br>
+
+<div>
+    <label>DOB</label>
+    <input type="date" min="2019-05-05" step="2" id="todaydate">
+</div>
+<br>
+<div>
+    <label>
+        Age
+    </label>
+    <input type="number" min=10 max=100 step="10">
+</div>
+</fieldset>
+<fieldset>
+<legend>
+        Professional Details 
+     </legend>
+<div>
+    <label>Email</label>
+    <input type="email">
+</div>
+<br>
+<div>
+    <label>WebSite</label>
+    <input type="url">
+</div>
+<br>
+<div>
+<label>How was the session?</label><br> 
+<input type="range" min="0" max="10" step="5" list="Scores">
+<datalist id="Scores">
+<option value="0">0</option>
+<option value="5">5</option>
+<option value="10">10</option>
+</datalist>
+</div>
+<br>
+<div>
+    <input type="color">
+</div>
+<br>
+<progress min="0" max="100" value="80"></progress>
+<br>
+<label>Select your location:</label>
+<input type="text" list="citynames">
+<datalist id="citynames">
+    <option value="chennai">Chennai</option>
+    <option value="madurai">Madurai</option>
+    <option value="magalore">Magalore</option>
+    <option value="bengaluru">Bengaluru</option>
+    <option value="mumbai">Mumbai</option>
+</datalist>
+<br>
+<input type=search>
+<input type=search results=5>
+<input type=ssearch results=5 autosave=a_unique_value>
+
+            </fieldset>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+        </form>
+        <script>
+            var setDefaultValues = function(){
+                document.getElementById("todaydate").valueAsDate = new Date()
+               //document.getElementById("todaydate").setAttribute("max",setDateFun) = new Date()
+               var date =new date().toISOString()
+               console.log(date)
+               var todayValue =date.split("T")[0]
+               document.getElementById("todaydate").max=todayValue +10
+            }
+        </script>
+    </body>
+    </html>
